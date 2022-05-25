@@ -1,0 +1,15 @@
+.header {
+  text-align: center;
+  font-weight: 700;
+}
+
+.cardsContainer {
+  padding: 4rem;
+  margin-top: 2rem;
+  margin-bottom: 40rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+
+  gap: 6rem;
+  justify-items: center;
+}

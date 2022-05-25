@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --radius: 10px;
+}
+
+.dark {
+  --bg: #282c35;
+  --primary: #fff;
+  --primary10: #e6e8ee;
+  --primary20: #ccd1de;
+  --primary30: #b3bacd;
+  --primary70: #00113e;
+  --primary80: #000e35;
+  --primary90: #000c2c;
+  --secondary: #8e9eca;
+  --bg-btn: #3b5bdb;
+  --bg-color: #fff;
+}
+.light {
+  --bg: #fff;
+  --primary: #001858;
+  --primary10: #e6e8ee;
+  --primary20: #ccd1de;
+  --primary30: #b3bacd;
+  --primary70: #00113e;
+  --primary80: #000e35;
+  --primary90: #000c2c;
+  --secondary: #172c66;
+  --bg-btn: #3b5bdb;
+  --bg-color: #fff;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Lato, sans-serif;
+  background: var(--bg);
+  color: var(--primary);
+  // overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: var(--primary);
+}
+h1 {
+  font-size: 4rem;
+}
+h2 {
+  font-size: 2.8rem;
+}
+
+p {
+  color: var(--secondary);
+  font-size: 1.8rem;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: var(--bg-btn);
+  color: var(--bg-color);
+}
+
+.app {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary);
+  display: inline-block;
+}
+
+.btng {
+  padding: 0.8rem 1.4rem;
+  position: relative;
+  transition: all 0.2s;
+  overflow: hidden;
+
+  &:hover {
+    color: var(--primary10);
+  }
+
+  &:hover span::before {
+    width: 100%;
+    background-color: var(--bg-btn);
+    transform: translate(-50%, -50%) rotate(60deg);
+  }
+
+  span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: 2px solid var(--primary);
+    z-index: -1;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 8%;
+      height: 500%;
+      background-color: var(--bg);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-60deg);
+      transition: all 0.2s;
+    }
+  }
+}
+
+.theme {
+  padding: 1rem 2rem;
+}
