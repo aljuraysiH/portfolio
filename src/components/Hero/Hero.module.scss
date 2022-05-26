@@ -1,5 +1,4 @@
 .container {
-  // margin-top: rem;
   padding: 0 4rem;
   display: flex;
   gap: 1rem;
@@ -27,18 +26,6 @@
       background-clip: text;
       -webkit-background-clip: text;
       color: transparent;
-
-      // span {
-      //   background-image: linear-gradient(
-      //     var(--bg-btn),
-      //     var(--primary),
-      //     var(--bg-btn)
-      //   );
-      //   background-clip: text;
-      //   -webkit-background-clip: text;
-      //   color: transparent;
-      //   // color: var(--bg-btn);
-      // }
     }
 
     .hero-text {

@@ -16,12 +16,7 @@ const Navbar = ({ toggleTheme, theme }) => {
             About
           </NavLink>
           <a href="#projects">Projects</a>
-          <NavLink
-            className={({ isActive }) => (isActive ? styles.active : "")}
-            to={"/skills"}
-          >
-            Skills
-          </NavLink>
+          <a href="#skills">Skills</a>
           <a href="/" className="btng">
             <span></span>
             Contact

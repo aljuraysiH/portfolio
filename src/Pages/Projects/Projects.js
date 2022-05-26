@@ -10,7 +10,7 @@ const Projects = ({ id }) => {
     AOS.init();
   });
   return (
-    <div id={id}>
+    <div id={id} className={styles.container}>
       <h2 data-aos="zoom-in" className={styles.header}>
         Projects
       </h2>
