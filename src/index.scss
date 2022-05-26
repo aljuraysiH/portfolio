@@ -9,9 +9,18 @@
 
 :root {
   --radius: 10px;
+  --gredient: linear-gradient(var(--bg-btn), var(--primary), var(--bg-btn));
 }
 
 .dark {
+  --gredientMenu: radial-gradient(
+    circle,
+    #3b5bdb,
+    #2a47b1,
+    #1a3488,
+    #0a2262,
+    #00113e
+  );
   --bg: #282c35;
   --primary: #fff;
   --primary10: #e6e8ee;
@@ -25,6 +34,14 @@
   --bg-color: #fff;
 }
 .light {
+  --gredientMenu: radial-gradient(
+    circle,
+    #8696d4,
+    #7382b1,
+    #626e8f,
+    #525a6e,
+    #44474e
+  );
   --bg: #fff;
   --primary: #001858;
   --primary10: #e6e8ee;
@@ -42,6 +59,16 @@ html {
   font-size: 62.5%;
   overflow-y: scroll;
   scroll-behavior: smooth;
+
+  @media only screen and (max-width: 68.75em) {
+    font-size: 56%;
+  }
+  @media only screen and (max-width: 53.125em) {
+    font-size: 50%;
+  }
+  @media only screen and (max-width: 28.125em) {
+    font-size: 45%;
+  }
 }
 
 body {
@@ -80,6 +107,8 @@ button {
 .app {
   max-width: 120rem;
   margin: 0 auto;
+  position: relative;
+  overflow: hidden;
 }
 
 a {

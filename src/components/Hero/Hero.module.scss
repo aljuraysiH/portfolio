@@ -3,6 +3,14 @@
   display: flex;
   gap: 1rem;
 
+  @media only screen and (max-width: 46.875em) {
+    margin-top: 4rem;
+    flex-direction: column;
+    gap: 4rem;
+    align-items: center;
+    justify-content: center;
+  }
+
   .left {
     flex: 1;
     display: flex;
@@ -13,16 +21,16 @@
     overflow: hidden;
     padding-left: 1rem;
 
+    @media only screen and (max-width: 46.875em) {
+      // margin-top: 4rem;
+    }
+
     .hero-header {
       letter-spacing: 1.3px;
       font-size: 4rem;
       font-weight: 900;
 
-      background-image: linear-gradient(
-        var(--bg-btn),
-        var(--primary),
-        var(--bg-btn)
-      );
+      background-image: var(--gredient);
       background-clip: text;
       -webkit-background-clip: text;
       color: transparent;
@@ -59,11 +67,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    // max-width: 100%;
-    // width: 20rem;
+
+    @media only screen and (max-width: 46.875em) {
+    }
 
     svg {
       width: 100%;
+
+      @media only screen and (max-width: 46.875em) {
+        width: 80%;
+      }
     }
   }
 }
