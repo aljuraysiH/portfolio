@@ -1,6 +1,3 @@
-import { useEffect } from "react";
-import useTheme from "../../hooks/useTheme";
-import Toggle from "../Toggle/Toggle";
 import { heroVariantsLeft, heroVariantsRight } from "./HeroVariants";
 import styles from "./Hero.module.scss";
 import SVG from "../SVG/SVG";
@@ -8,17 +5,8 @@ import { TwitterLogo, LinkedinLogo, GithubLogo } from "phosphor-react";
 import { motion } from "framer-motion";
 
 const Hero = () => {
-  const { theme, toggleTheme } = useTheme();
-
-  useEffect(() => {
-    document.documentElement.className = theme;
-    localStorage.setItem("theme", theme);
-  }, [theme]);
-
   return (
     <>
-      <Toggle onClick={toggleTheme} theme={theme} />
-
       <div className={styles.container}>
         <motion.div
           className={styles.left}

@@ -1,11 +1,22 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./Navbar.module.scss";
 import { Link, Outlet } from "react-router-dom";
+import useTheme from "../../hooks/useTheme";
+import Toggle from "../Toggle/Toggle";
 
-const Navbar = ({ toggleTheme, theme }) => {
+const Navbar = () => {
   const [toggle, setToggle] = useState(false);
+  const { theme, toggleTheme } = useTheme();
+
+  useEffect(() => {
+    document.documentElement.className = theme;
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
   return (
     <>
+      <Toggle onClick={toggleTheme} theme={theme} />
+
       <div className={styles.navbar}>
         <Link to={"/"}>
           <p className={styles.logo}>H_Aljuraysi</p>

@@ -4,8 +4,7 @@
   width: 28rem;
   height: 35rem;
 
-  &:hover .card,
-  &:focus-within .card {
+  &:hover .card {
     transform: rotateY(180deg);
     @media (hover: none) {
       & {
@@ -20,6 +19,7 @@
 }
 
 .card {
+  // border-radius: var(--radius);
   position: relative;
   width: 100%;
   height: 100%;
@@ -33,8 +33,12 @@
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: fill;
+    // object-fit: fill;
   }
+
+  // &-front {
+  //   background-image: linear-gradient(to right, #8898d8, #c0c7e5);
+  // }
 
   &-front,
   &-back {

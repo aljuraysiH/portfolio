@@ -7,10 +7,10 @@ import img6 from "../assets/img/site5.png";
 
 export const projectsData = [
   {
-    img: img2,
-    name: "Portfolio",
-    description: "My personal portfolio built with react",
-    link: "/",
+    img: img6,
+    name: "Omnifood",
+    description: "UI for food website",
+    link: "https://omnifood-aljuraysi.netlify.app/",
   },
   {
     img: img3,
@@ -25,17 +25,18 @@ export const projectsData = [
     link: "https://natours-aljuraysi.netlify.app/",
   },
   {
+    img: img2,
+    name: "Portfolio",
+    description: "My personal portfolio built with react",
+    link: "#projects",
+  },
+  {
     img: img5,
     name: "Trillo",
     description: "UI for tourism website",
     link: "https://trillo-aljuraysi.netlify.app/",
   },
-  {
-    img: img6,
-    name: "Omnifood",
-    description: "UI for food website",
-    link: "https://omnifood-aljuraysi.netlify.app/",
-  },
+
   // {
   //   img: img,
   //   name: "project",

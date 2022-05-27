@@ -9,10 +9,17 @@
 
 :root {
   --radius: 10px;
-  --gredient: linear-gradient(var(--bg-btn), var(--primary), var(--bg-btn));
+  --gredient: linear-gradient(
+    to right,
+    var(--bg-btn),
+    var(--primary),
+    var(--bg-btn)
+  );
 }
 
 .dark {
+  --skillsShadow: rgba(255, 255, 255, 0.109);
+
   --gredientMenu: radial-gradient(
     circle,
     #3b5bdb,
@@ -34,6 +41,8 @@
   --bg-color: #fff;
 }
 .light {
+  --skillsShadow: rgba(0, 0, 0, 0.2);
+
   --gredientMenu: radial-gradient(
     circle,
     #8696d4,

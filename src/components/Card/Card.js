@@ -4,7 +4,7 @@ import "aos/dist/aos.css";
 import styles from "./Card.module.scss";
 import AOS from "aos";
 
-const Card = ({ img, name, description, link = "" }) => {
+const Card = ({ img, name, description, link }) => {
   useEffect(() => {
     AOS.init();
   });
@@ -24,7 +24,7 @@ const Card = ({ img, name, description, link = "" }) => {
           <a
             href={link}
             className={styles.btn}
-            target="_blank"
+            target={link === "#projects" ? "" : "_blank"}
             rel="noreferrer"
           >
             Visit Website
