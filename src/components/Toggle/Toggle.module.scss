@@ -1,6 +1,8 @@
 .toggle-container {
   position: absolute;
   display: flex;
+  align-items: center;
+  // justify-content: center;
   gap: 2rem;
   top: 8rem;
   left: 8rem;
@@ -19,7 +21,7 @@
 
   @media only screen and (max-width: 46.875em) {
     top: 1rem;
-    left: 45%;
+    left: 40%;
   }
 }
 
