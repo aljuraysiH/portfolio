@@ -1,8 +1,16 @@
 .flipCard {
   background-color: transparent;
   perspective: 1000px;
-  width: 28rem;
-  height: 35rem;
+  width: 48rem;
+  height: 32rem;
+
+  @media only screen and (max-width: 31.25em) {
+    width: 45rem;
+    height: 30rem;
+  }
+  @media only screen and (max-width: 27em) {
+    width: 38rem;
+  }
 
   &:hover .card {
     transform: rotateY(180deg);

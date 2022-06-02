@@ -3,8 +3,10 @@ import styles from "./Navbar.module.scss";
 import { Link, Outlet } from "react-router-dom";
 import useTheme from "../../hooks/useTheme";
 import Toggle from "../Toggle/Toggle";
+import { useTranslation } from "react-i18next";
 
-const Navbar = () => {
+const Navbar = ({ language, setLanguage }) => {
+  const { t, i18n } = useTranslation();
   const [toggle, setToggle] = useState(false);
   const { theme, toggleTheme } = useTheme();
 
@@ -15,25 +17,30 @@ const Navbar = () => {
 
   return (
     <>
-      <Toggle onClick={toggleTheme} theme={theme} />
+      <Toggle
+        onClick={toggleTheme}
+        theme={theme}
+        language={language}
+        setLanguage={setLanguage}
+      />
 
-      <div className={styles.navbar}>
+      <div className={`${i18n.language === "en" ? styles.navbar : styles.ar}`}>
         <Link to={"/"}>
-          <p className={styles.logo}>H_Aljuraysi</p>
+          <p className={styles.logo}>{t("logo")}</p>
         </Link>
         <nav className={`${styles.nav} ${toggle ? "" : styles.hidden}`}>
           <a href="/" onClick={() => setToggle(false)}>
-            About
+            {t("about")}
           </a>
           <a href="#projects" onClick={() => setToggle(false)}>
-            Projects
+            {t("projects")}
           </a>
           <a href="#skills" onClick={() => setToggle(false)}>
-            Skills
+            {t("skills")}
           </a>
           <a href="/" className="btng" onClick={() => setToggle(false)}>
             <span></span>
-            Contact
+            {t("contact")}
           </a>
         </nav>
         <button

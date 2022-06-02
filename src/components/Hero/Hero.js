@@ -3,11 +3,16 @@ import styles from "./Hero.module.scss";
 import SVG from "../SVG/SVG";
 import { TwitterLogo, LinkedinLogo, GithubLogo } from "phosphor-react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const Hero = () => {
+  const { t, i18n } = useTranslation();
+  console.log(i18n.language);
   return (
     <>
-      <div className={styles.container}>
+      <div
+        className={`${i18n.language === "en" ? styles.container : styles.ar}`}
+      >
         <motion.div
           className={styles.left}
           variants={heroVariantsLeft}
@@ -16,17 +21,15 @@ const Hero = () => {
         >
           <h2 className={styles["hero-header"]}>
             <span>
-              Hey! I Am <br></br>
-            </span>{" "}
-            HAMAD ALJURAYSI
+              {t("welcome")} <br></br>
+            </span>
+            {t("name")}
           </h2>
-          <p className={styles["hero-text"]}>
-            Frontend Web Developer with high level of experience in web
-            development, producting the quality work.
-          </p>
+          <p className={styles["hero-text"]}>{t("info")}</p>
           <a href="/" className={`btng ${styles.btn}`}>
             <span></span>
-            Hire me
+            {/* Hire me */}
+            {t("hire_me")}
           </a>
           <div className={styles.socials}>
             <a

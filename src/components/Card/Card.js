@@ -3,8 +3,10 @@ import { useEffect } from "react";
 import "aos/dist/aos.css";
 import styles from "./Card.module.scss";
 import AOS from "aos";
+import { useTranslation } from "react-i18next";
 
-const Card = ({ img, name, description, link }) => {
+const Card = ({ img, name, description, arDescription, link }) => {
+  const { t, i18n } = useTranslation();
   useEffect(() => {
     AOS.init();
   });
@@ -20,14 +22,14 @@ const Card = ({ img, name, description, link }) => {
         </div>
         <div className={styles["card-back"]}>
           <h4>{name}</h4>
-          <p>{description}</p>
+          <p>{i18n.language === "en" ? description : arDescription}</p>
           <a
             href={link}
             className={styles.btn}
             target={link === "#projects" ? "" : "_blank"}
             rel="noreferrer"
           >
-            Visit Website
+            {t("view_website")}
             <span></span>
           </a>
         </div>
