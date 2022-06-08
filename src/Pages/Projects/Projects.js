@@ -13,7 +13,7 @@ const Projects = ({ id }) => {
   });
   return (
     <div id={id} className={styles.container}>
-      <h2 data-aos="zoom-in" className={styles.header}>
+      <h2 data-aos="fade-up" data-aos-duration="2000" className={styles.header}>
         {t("projects")}
       </h2>
       <div className={styles.cardsContainer}>

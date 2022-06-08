@@ -29,7 +29,7 @@ const Navbar = ({ language, setLanguage }) => {
           <p className={styles.logo}>{t("logo")}</p>
         </Link>
         <nav className={`${styles.nav} ${toggle ? "" : styles.hidden}`}>
-          <a href="/" onClick={() => setToggle(false)}>
+          <a href="#about" onClick={() => setToggle(false)}>
             {t("about")}
           </a>
           <a href="#projects" onClick={() => setToggle(false)}>

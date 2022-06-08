@@ -4,7 +4,6 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import Home from "./Pages/Home/Home";
-import About from "./Pages/About/About";
 import Projects from "./Pages/Projects/Projects";
 
 function App() {
@@ -41,7 +40,6 @@ function App() {
           >
             <Route index element={<Home />} />
             <Route path="*" element={<Home />} />
-            <Route path="/about" element={<About />} />
             <Route path="/projects" element={<Projects />} />
           </Route>
         </Routes>

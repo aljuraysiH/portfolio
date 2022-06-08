@@ -8,22 +8,44 @@ const About = ({ id }) => {
     AOS.init();
   });
   return (
-    <div id={id} data-aos="fade-up" data-aos-duration="2500">
-      <h2 className={styles.header}>Skills</h2>
+    <div id={id}>
+      <h2 data-aos="fade-up" data-aos-duration="500" className={styles.header}>
+        Skills
+      </h2>
       <div className={styles["icons-container"]}>
-        <div className={styles.card}>
+        <div
+          data-aos="fade-up"
+          data-aos-duration="500"
+          data-aos-delay="500"
+          className={styles.card}
+        >
           <span>HTML</span>
           <HtmlIcon />
         </div>
-        <div className={styles.card}>
+        <div
+          data-aos="fade-up"
+          data-aos-duration="500"
+          data-aos-delay="1000"
+          className={styles.card}
+        >
           <span>CSS</span>
           <CssIcon />
         </div>
-        <div className={styles.card}>
+        <div
+          data-aos="fade-up"
+          data-aos-duration="500"
+          data-aos-delay="1500"
+          className={styles.card}
+        >
           <span>JavaScript</span>
           <JavaScriptIcon />
         </div>
-        <div className={styles.card}>
+        <div
+          data-aos="fade-up"
+          data-aos-duration="500"
+          data-aos-delay="2000"
+          className={styles.card}
+        >
           <span>React</span>
           <ReactIcon />
         </div>

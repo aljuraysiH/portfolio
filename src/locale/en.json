@@ -9,5 +9,15 @@
   "skills": "Skills",
   "contact": "Contact",
   "logo": "H_Aljuraysi",
-  "view_website": "View Website"
+  "view_website": "View Website",
+  "about_header": "Front-End Developer",
+  "about_disc": "Front End Developer who has a passion to learn everything about Web Development, I can help you to create a great responsive web application.",
+  "about_info": "More Info :",
+  "about_name": "Name: Hamad Aljuraysi",
+  "about_nat": "Nationality: Saudi",
+  "about_age": "Age: 25",
+  "about_city": "City: Riyadh",
+  "about_degree": "Degree: Diploma",
+  "about_major": "Major: Computer Programming",
+  "about_cv": "Download CV"
 }
