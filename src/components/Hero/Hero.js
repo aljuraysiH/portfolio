@@ -6,13 +6,10 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
 const Hero = () => {
-  const { t, i18n } = useTranslation();
-  console.log(i18n.language);
+  const { t } = useTranslation();
   return (
     <>
-      <div
-        className={`${i18n.language === "en" ? styles.container : styles.ar}`}
-      >
+      <div className={styles.container}>
         <motion.div
           className={styles.left}
           variants={heroVariantsLeft}
@@ -28,7 +25,6 @@ const Hero = () => {
           <p className={styles["hero-text"]}>{t("info")}</p>
           <a href="/" className={`btng ${styles.btn}`}>
             <span></span>
-            {/* Hire me */}
             {t("hire_me")}
           </a>
           <div className={styles.socials}>

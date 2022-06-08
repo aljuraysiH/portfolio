@@ -10,10 +10,25 @@ import Projects from "./Pages/Projects/Projects";
 function App() {
   const { i18n } = useTranslation();
   const location = useLocation();
-  const [language, setLanguage] = useState("en");
+  const [language, setLanguage] = useState(() => {
+    let lang = "en";
+    if (localStorage.getItem("language")) {
+      lang = localStorage.getItem("language");
+    }
+    return lang ?? "";
+  });
+
+  useEffect(() => {
+    localStorage.setItem("language", language);
+  }, [language]);
 
   useEffect(() => {
     i18n.changeLanguage(language);
+    if (i18n.language === "ar") {
+      document.body.dir = "rtl";
+    } else {
+      document.body.dir = "ltr";
+    }
   }, [language, i18n]);
 
   return (

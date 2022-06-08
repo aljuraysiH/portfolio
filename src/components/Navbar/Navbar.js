@@ -24,7 +24,7 @@ const Navbar = ({ language, setLanguage }) => {
         setLanguage={setLanguage}
       />
 
-      <div className={`${i18n.language === "en" ? styles.navbar : styles.ar}`}>
+      <div className={styles.navbar}>
         <Link to={"/"}>
           <p className={styles.logo}>{t("logo")}</p>
         </Link>
@@ -44,7 +44,9 @@ const Navbar = ({ language, setLanguage }) => {
           </a>
         </nav>
         <button
-          className={`${styles.menu} ${toggle ? styles.open : ""}`}
+          className={`${styles.menu} ${toggle ? styles.open : ""} ${
+            i18n.language === "ar" ? styles.ar : styles.en
+          }`}
           onClick={() => setToggle(!toggle)}
         ></button>
       </div>

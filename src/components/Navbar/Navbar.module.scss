@@ -106,7 +106,7 @@
   background-size: 50% 100%;
   position: fixed;
   top: 1.4rem;
-  right: 0.8rem;
+
   clip-path: inset(0 25%);
   -webkit-mask: linear-gradient(90deg, #0000, #000 25% 75%, #0000);
   cursor: pointer;
@@ -145,33 +145,8 @@
 }
 
 .ar {
-  font-family: "Tajawal", sans-serif;
-  max-width: 120rem;
-  margin: 0 auto 2rem;
-  padding: 1rem 2rem 1.2rem;
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 2.4rem;
-  border-bottom: 1px solid var(--primary90);
-  color: var(--primary90);
-
-  @media only screen and (max-width: 53.125em) {
-    border: none;
-    padding: 1.2rem 2.4rem;
-  }
-
-  .nav {
-    flex-direction: row-reverse;
-
-    @media only screen and (max-width: 53.125em) {
-      flex-direction: column;
-    }
-  }
-
-  .menu {
-    top: 1.4rem;
-    left: 0.8rem;
-  }
+  left: 0.8rem;
+}
+.en {
+  right: 0.8rem;
 }
