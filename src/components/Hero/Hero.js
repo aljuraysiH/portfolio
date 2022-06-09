@@ -4,8 +4,10 @@ import SVG from "../SVG/SVG";
 import { TwitterLogo, LinkedinLogo, GithubLogo } from "phosphor-react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import useModal from "../../hooks/useModal";
 
 const Hero = () => {
+  const { showModal, setShowModal } = useModal();
   const { t } = useTranslation();
   return (
     <>
@@ -23,7 +25,14 @@ const Hero = () => {
             {t("name")}
           </h2>
           <p className={styles["hero-text"]}>{t("info")}</p>
-          <a href="/" className={`btng ${styles.btn}`}>
+          <a
+            href="/"
+            className={`btng ${styles.btn}`}
+            onClick={(e) => {
+              e.preventDefault();
+              setShowModal(!showModal);
+            }}
+          >
             <span></span>
             {t("hire_me")}
           </a>

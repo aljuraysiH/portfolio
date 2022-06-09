@@ -19,5 +19,9 @@
   "about_city": "City: Riyadh",
   "about_degree": "Degree: Diploma",
   "about_major": "Major: Computer Programming",
-  "about_cv": "Download CV"
+  "about_cv": "Download CV",
+  "name_form": "Name",
+  "email": "Email",
+  "message": "Message",
+  "send": "Send"
 }

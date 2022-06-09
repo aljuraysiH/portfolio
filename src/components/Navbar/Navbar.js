@@ -2,10 +2,12 @@ import { useState, useEffect } from "react";
 import styles from "./Navbar.module.scss";
 import { Link, Outlet } from "react-router-dom";
 import useTheme from "../../hooks/useTheme";
+import useModal from "../../hooks/useModal";
 import Toggle from "../Toggle/Toggle";
 import { useTranslation } from "react-i18next";
 
 const Navbar = ({ language, setLanguage }) => {
+  const { showModal, setShowModal } = useModal();
   const { t, i18n } = useTranslation();
   const [toggle, setToggle] = useState(false);
   const { theme, toggleTheme } = useTheme();
@@ -38,7 +40,15 @@ const Navbar = ({ language, setLanguage }) => {
           <a href="#skills" onClick={() => setToggle(false)}>
             {t("skills")}
           </a>
-          <a href="/" className="btng" onClick={() => setToggle(false)}>
+          <a
+            href="/"
+            className="btng"
+            onClick={(e) => {
+              e.preventDefault();
+              setToggle(false);
+              setShowModal(!showModal);
+            }}
+          >
             <span></span>
             {t("contact")}
           </a>

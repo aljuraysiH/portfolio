@@ -5,6 +5,7 @@ import { AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import Home from "./Pages/Home/Home";
 import Projects from "./Pages/Projects/Projects";
+import Modal from "./components/Modal/Modal";
 
 function App() {
   const { i18n } = useTranslation();
@@ -31,20 +32,23 @@ function App() {
   }, [language, i18n]);
 
   return (
-    <div className="app">
-      <AnimatePresence exitBeforeEnter>
-        <Routes location={location} key={location.key}>
-          <Route
-            path="/"
-            element={<Navbar language={language} setLanguage={setLanguage} />}
-          >
-            <Route index element={<Home />} />
-            <Route path="*" element={<Home />} />
-            <Route path="/projects" element={<Projects />} />
-          </Route>
-        </Routes>
-      </AnimatePresence>
-    </div>
+    <>
+      <Modal />
+      <div className="app">
+        <AnimatePresence exitBeforeEnter>
+          <Routes location={location} key={location.key}>
+            <Route
+              path="/"
+              element={<Navbar language={language} setLanguage={setLanguage} />}
+            >
+              <Route index element={<Home />} />
+              <Route path="*" element={<Home />} />
+              <Route path="/projects" element={<Projects />} />
+            </Route>
+          </Routes>
+        </AnimatePresence>
+      </div>
+    </>
   );
 }
 
