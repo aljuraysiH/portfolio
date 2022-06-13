@@ -14,7 +14,8 @@
     to right,
     var(--bg-btn),
     var(--primary),
-    var(--bg-btn)
+    var(--bg-btn),
+    var(--primary)
   );
 }
 
@@ -173,4 +174,10 @@ a {
 
 .theme {
   padding: 1rem 2rem;
+}
+
+.ar h2,
+.ar a,
+.ar span {
+  letter-spacing: -1px !important;
 }

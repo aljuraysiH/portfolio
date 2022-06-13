@@ -14,7 +14,7 @@ const Card = ({ img, name, description, arDescription, link }) => {
     <div
       className={styles.flipCard}
       data-aos="fade-up"
-      data-aos-duration="2000"
+      data-aos-duration="1500"
     >
       <div className={styles.card}>
         <div className={styles["card-front"]}>

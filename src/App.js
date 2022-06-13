@@ -34,7 +34,7 @@ function App() {
   return (
     <>
       <Modal />
-      <div className="app">
+      <div className={`app ${i18n.language === "ar" ? "ar" : ""}`}>
         <AnimatePresence exitBeforeEnter>
           <Routes location={location} key={location.key}>
             <Route

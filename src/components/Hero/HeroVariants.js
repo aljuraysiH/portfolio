@@ -8,9 +8,8 @@ export const heroVariantsLeft = {
     x: 0,
     transition: {
       x: {
-        type: "spring",
-        duration: 4,
-        bounce: 0.4,
+        type: "tween",
+        duration: 1.5,
       },
     },
   },
@@ -24,7 +23,7 @@ export const heroVariantsRight = {
     opacity: 1,
 
     transition: {
-      duration: 3,
+      duration: 1.5,
     },
   },
 };

@@ -40,24 +40,26 @@ function Modal() {
           onClick={() => setShowModal(!showModal)}
         />
         <h2>{t("contact")}</h2>
-        <div className={styles["icon-container"]}>
-          <MdEmail className={styles.icon} />
+        <div className={styles["modal-container"]}>
+          <div className={styles["icon-container"]}>
+            <MdEmail className={styles.icon} />
+          </div>
+          <form ref={form} onSubmit={sendEmail}>
+            <div>
+              <label htmlFor="name">{t("name_form")}</label>
+              <input id="name" type="text" name="user_name" required />
+            </div>
+            <div>
+              <label htmlFor="email">{t("email")}</label>
+              <input id="email" type="email" name="user_email" required />
+            </div>
+            <div>
+              <label htmlFor="message">{t("message")}</label>
+              <textarea id="message" name="message" required />
+            </div>
+            <button type="submit">{t("send")}</button>
+          </form>
         </div>
-        <form ref={form} onSubmit={sendEmail}>
-          <div>
-            <label htmlFor="name">{t("name_form")}</label>
-            <input id="name" type="text" name="user_name" required />
-          </div>
-          <div>
-            <label htmlFor="email">{t("email")}</label>
-            <input id="email" type="email" name="user_email" required />
-          </div>
-          <div>
-            <label htmlFor="message">{t("message")}</label>
-            <textarea id="message" name="message" required />
-          </div>
-          <button type="submit">{t("send")}</button>
-        </form>
       </div>
     </div>
   );

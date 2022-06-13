@@ -10,6 +10,11 @@
     top: 1rem;
     left: 45%;
   }
+
+  @media only screen and (max-width: 25em) {
+    left: 50%;
+    gap: 1rem;
+  }
 }
 .ar {
   position: absolute;
@@ -22,6 +27,11 @@
   @media only screen and (max-width: 46.875em) {
     top: 1rem;
     left: 40%;
+  }
+
+  @media only screen and (max-width: 25em) {
+    left: 30%;
+    gap: 1rem;
   }
 }
 

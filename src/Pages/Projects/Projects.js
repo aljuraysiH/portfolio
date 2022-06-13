@@ -12,10 +12,13 @@ const Projects = ({ id }) => {
     AOS.init();
   });
   return (
-    <div id={id} className={styles.container}>
-      <h2 data-aos="fade-up" data-aos-duration="2000" className={styles.header}>
-        {t("projects")}
-      </h2>
+    <div
+      data-aos="fade-up"
+      data-aos-duration="1500"
+      id={id}
+      className={styles.container}
+    >
+      <h2 className={styles.header}>{t("projects")}</h2>
       <div className={styles.cardsContainer}>
         {projectsData.map((project, index) => {
           return <Card key={index} {...project} />;

@@ -14,7 +14,7 @@ function About({ id }) {
   });
   return (
     <div id={id} className={styles.container}>
-      <div data-aos="fade-up" data-aos-duration="3000" className={styles.left}>
+      <div data-aos="fade-up" data-aos-duration="1500" className={styles.left}>
         <h2 className={i18n.language === "ar" ? styles.headerAr : ""}>
           {t("about_header")}
         </h2>
@@ -32,7 +32,7 @@ function About({ id }) {
           </a>
         </div>
       </div>
-      <div data-aos="fade-up" data-aos-duration="3000" className={styles.right}>
+      <div data-aos="fade-up" data-aos-duration="1500" className={styles.right}>
         <img src={picture} alt="" />
       </div>
     </div>
