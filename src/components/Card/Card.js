@@ -17,10 +17,10 @@ const Card = ({ img, name, description, arDescription, link }) => {
       data-aos-duration="1500"
     >
       <div className={styles.card}>
-        <div className={styles["card-front"]}>
+        <figure className={styles["card-front"]}>
           <img src={img} alt="img" />
-        </div>
-        <div className={styles["card-back"]}>
+        </figure>
+        <figcaption className={styles["card-back"]}>
           <h4>{name}</h4>
           <p>{i18n.language === "en" ? description : arDescription}</p>
           <a
@@ -32,7 +32,7 @@ const Card = ({ img, name, description, arDescription, link }) => {
             {t("view_website")}
             <span></span>
           </a>
-        </div>
+        </figcaption>
       </div>
     </div>
   );

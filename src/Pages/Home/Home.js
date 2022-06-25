@@ -8,7 +8,7 @@ import { homeVariatns } from "./Home.variants";
 
 const Home = ({ toggleTheme, theme }) => {
   return (
-    <motion.div
+    <motion.main
       variants={homeVariatns}
       initial={"hidden"}
       animate={"visible"}
@@ -18,7 +18,7 @@ const Home = ({ toggleTheme, theme }) => {
       <About id="about" />
       <Projects id="projects" />
       <Skills id="skills" />
-    </motion.div>
+    </motion.main>
   );
 };
 

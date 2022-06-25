@@ -10,66 +10,64 @@ const Hero = () => {
   const { showModal, setShowModal } = useModal();
   const { t } = useTranslation();
   return (
-    <>
-      <div className={styles.container}>
-        <motion.div
-          className={styles.left}
-          variants={heroVariantsLeft}
-          initial="hidden"
-          animate="visiable"
+    <section className={styles.container}>
+      <motion.article
+        className={styles.left}
+        variants={heroVariantsLeft}
+        initial="hidden"
+        animate="visiable"
+      >
+        <h2 className={styles["hero-header"]}>
+          <span>
+            {t("welcome")} <br></br>
+          </span>
+          {t("name")}
+        </h2>
+        <p className={styles["hero-text"]}>{t("info")}</p>
+        <a
+          href="/"
+          className={`btng ${styles.btn}`}
+          onClick={(e) => {
+            e.preventDefault();
+            setShowModal(!showModal);
+          }}
         >
-          <h2 className={styles["hero-header"]}>
-            <span>
-              {t("welcome")} <br></br>
-            </span>
-            {t("name")}
-          </h2>
-          <p className={styles["hero-text"]}>{t("info")}</p>
+          <span></span>
+          {t("hire_me")}
+        </a>
+        <div className={styles.socials}>
           <a
-            href="/"
-            className={`btng ${styles.btn}`}
-            onClick={(e) => {
-              e.preventDefault();
-              setShowModal(!showModal);
-            }}
+            href="https://github.com/aljuraysiH"
+            target="_blank"
+            rel="noreferrer noopener"
           >
-            <span></span>
-            {t("hire_me")}
+            <GithubLogo weight="regular" className={styles.social} />
           </a>
-          <div className={styles.socials}>
-            <a
-              href="https://github.com/aljuraysiH"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <GithubLogo weight="regular" className={styles.social} />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/hamad-aljuraysi/"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <LinkedinLogo weight="regular" className={styles.social} />
-            </a>
-            <a
-              href="https://twitter.com/HamadDev"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <TwitterLogo weight="regular" className={styles.social} />
-            </a>
-          </div>
-        </motion.div>
-        <motion.div
-          className={styles["img-container"]}
-          variants={heroVariantsRight}
-          initial="hidden"
-          animate="visiable"
-        >
-          <SVG />
-        </motion.div>
-      </div>
-    </>
+          <a
+            href="https://www.linkedin.com/in/hamad-aljuraysi/"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <LinkedinLogo weight="regular" className={styles.social} />
+          </a>
+          <a
+            href="https://twitter.com/HamadDev"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <TwitterLogo weight="regular" className={styles.social} />
+          </a>
+        </div>
+      </motion.article>
+      <motion.figure
+        className={styles["img-container"]}
+        variants={heroVariantsRight}
+        initial="hidden"
+        animate="visiable"
+      >
+        <SVG />
+      </motion.figure>
+    </section>
   );
 };
 

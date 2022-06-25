@@ -13,8 +13,12 @@ function About({ id }) {
     AOS.init();
   });
   return (
-    <div id={id} className={styles.container}>
-      <div data-aos="fade-up" data-aos-duration="1500" className={styles.left}>
+    <section id={id} className={styles.container}>
+      <article
+        data-aos="fade-up"
+        data-aos-duration="1500"
+        className={styles.left}
+      >
         <h2 className={i18n.language === "ar" ? styles.headerAr : ""}>
           {t("about_header")}
         </h2>
@@ -31,11 +35,15 @@ function About({ id }) {
             {t("about_cv")}
           </a>
         </div>
-      </div>
-      <div data-aos="fade-up" data-aos-duration="1500" className={styles.right}>
+      </article>
+      <figure
+        data-aos="fade-up"
+        data-aos-duration="1500"
+        className={styles.right}
+      >
         <img src={picture} alt="" />
-      </div>
-    </div>
+      </figure>
+    </section>
   );
 }
 

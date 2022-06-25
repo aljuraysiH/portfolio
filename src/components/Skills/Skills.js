@@ -10,28 +10,28 @@ const About = ({ id }) => {
     AOS.init();
   });
   return (
-    <div id={id} data-aos="fade-up" data-aos-duration="1500">
+    <section id={id} data-aos="fade-up" data-aos-duration="1500">
       <h2 className={styles.header}>{t("skills")}</h2>
-      <div className={styles["icons-container"]}>
-        <div className={styles.card}>
+      <section className={styles["icons-container"]}>
+        <figure className={styles.card}>
           <span>HTML</span>
           <HtmlIcon />
-        </div>
-        <div className={styles.card}>
+        </figure>
+        <figure className={styles.card}>
           <span>CSS</span>
           <CssIcon />
-        </div>
-        <div className={styles.card}>
+        </figure>
+        <figure className={styles.card}>
           <span>JavaScript</span>
           <JavaScriptIcon />
-        </div>
+        </figure>
 
-        <div className={styles.card}>
+        <figure className={styles.card}>
           <span>React</span>
           <ReactIcon />
-        </div>
-      </div>
-    </div>
+        </figure>
+      </section>
+    </section>
   );
 };
 
