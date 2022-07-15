@@ -1,42 +1,33 @@
 .toggle-container {
-  position: absolute;
+  z-index: 10000;
   display: flex;
   align-items: center;
   gap: 2rem;
-  top: 8rem;
-  left: 8rem;
 
-  @media only screen and (max-width: 46.875em) {
-    top: 1rem;
-    left: 45%;
+  @media only screen and (max-width: 53.125em) {
+    margin-right: 8rem;
   }
 
   @media only screen and (max-width: 25em) {
-    left: 50%;
     gap: 1rem;
   }
 }
 .ar {
-  position: absolute;
   display: flex;
   flex-direction: row-reverse;
   gap: 2rem;
-  top: 8rem;
-  right: 8rem;
 
-  @media only screen and (max-width: 46.875em) {
-    top: 1rem;
-    left: 40%;
+  @media only screen and (max-width: 53.125em) {
+    margin-left: 8rem;
   }
 
   @media only screen and (max-width: 25em) {
-    left: 30%;
     gap: 1rem;
   }
 }
 
 .lang {
-  z-index: 2;
+  z-index: 10000;
   cursor: pointer;
   background: transparent;
   color: var(--primary);
@@ -45,20 +36,14 @@
 }
 
 .toggle {
-  z-index: 3;
+  z-index: 10000;
   position: relative;
-  // top: 8rem;
-  // left: 8rem;
+
   cursor: pointer;
   height: 3rem;
   width: 5rem;
   border-radius: 50px;
   background-image: linear-gradient(aqua, skyblue);
-
-  // @media only screen and (max-width: 46.875em) {
-  //   top: 1rem;
-  //   left: 50%;
-  // }
 }
 
 .day {

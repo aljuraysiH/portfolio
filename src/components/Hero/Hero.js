@@ -5,17 +5,18 @@ import { TwitterLogo, LinkedinLogo, GithubLogo } from "phosphor-react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import useModal from "../../hooks/useModal";
+import Social from "../Social/Social";
 
 const Hero = () => {
   const { showModal, setShowModal } = useModal();
   const { t } = useTranslation();
   return (
-    <section className={styles.container}>
+    <section className={styles.container} id='hero'>
       <motion.article
         className={styles.left}
         variants={heroVariantsLeft}
-        initial="hidden"
-        animate="visiable"
+        initial='hidden'
+        animate='visiable'
       >
         <h2 className={styles["hero-header"]}>
           <span>
@@ -25,7 +26,7 @@ const Hero = () => {
         </h2>
         <p className={styles["hero-text"]}>{t("info")}</p>
         <a
-          href="/"
+          href='/'
           className={`btng ${styles.btn}`}
           onClick={(e) => {
             e.preventDefault();
@@ -36,34 +37,24 @@ const Hero = () => {
           {t("hire_me")}
         </a>
         <div className={styles.socials}>
-          <a
-            href="https://github.com/aljuraysiH"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            <GithubLogo weight="regular" className={styles.social} />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/hamad-aljuraysi/"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            <LinkedinLogo weight="regular" className={styles.social} />
-          </a>
-          <a
-            href="https://twitter.com/HamadDev"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            <TwitterLogo weight="regular" className={styles.social} />
-          </a>
+          <Social href='https://github.com/aljuraysiH'>
+            <GithubLogo weight='regular' className={styles.social} />
+          </Social>
+
+          <Social href='https://www.linkedin.com/in/hamad-aljuraysi'>
+            <LinkedinLogo weight='regular' className={styles.social} />
+          </Social>
+
+          <Social href='https://twitter.com/HamadDev'>
+            <TwitterLogo weight='regular' className={styles.social} />
+          </Social>
         </div>
       </motion.article>
       <motion.figure
         className={styles["img-container"]}
         variants={heroVariantsRight}
-        initial="hidden"
-        animate="visiable"
+        initial='hidden'
+        animate='visiable'
       >
         <SVG />
       </motion.figure>

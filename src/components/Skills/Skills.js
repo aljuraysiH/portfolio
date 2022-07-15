@@ -10,7 +10,12 @@ const About = ({ id }) => {
     AOS.init();
   });
   return (
-    <section id={id} data-aos="fade-up" data-aos-duration="1500">
+    <section
+      className={styles.container}
+      id={id}
+      data-aos='fade-up'
+      data-aos-duration='1500'
+    >
       <h2 className={styles.header}>{t("skills")}</h2>
       <section className={styles["icons-container"]}>
         <figure className={styles.card}>

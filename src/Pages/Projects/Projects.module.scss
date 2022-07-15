@@ -1,5 +1,6 @@
 .container {
-  margin-top: 4rem;
+  max-width: 130rem;
+  margin: 4rem auto 0;
 }
 
 .header {
@@ -8,9 +9,8 @@
 }
 
 .cardsContainer {
-  padding: 4rem 3rem;
+  padding: 4rem;
   margin-top: 2rem;
-  // margin-bottom: 40rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(48rem, 1fr));
 
@@ -23,7 +23,6 @@
     justify-content: center;
   }
 
-  // gap: 6rem;
   column-gap: 4rem;
   row-gap: 6rem;
   justify-items: center;

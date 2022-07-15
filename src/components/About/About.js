@@ -1,13 +1,12 @@
 import styles from "./About.module.scss";
 import { useEffect } from "react";
-import CV from "../../assets/Hamad Aljuraysi CV.pdf";
+import CV from "../../assets/HamadAljuraysiCV.pdf";
 import picture from "../../assets/img/pp.png";
 import AOS from "aos";
 import { useTranslation } from "react-i18next";
 
 function About({ id }) {
   const { t, i18n } = useTranslation();
-  console.log(i18n.language);
 
   useEffect(() => {
     AOS.init();
@@ -15,8 +14,8 @@ function About({ id }) {
   return (
     <section id={id} className={styles.container}>
       <article
-        data-aos="fade-up"
-        data-aos-duration="1500"
+        data-aos='fade-up'
+        data-aos-duration='1500'
         className={styles.left}
       >
         <h2 className={i18n.language === "ar" ? styles.headerAr : ""}>
@@ -37,11 +36,11 @@ function About({ id }) {
         </div>
       </article>
       <figure
-        data-aos="fade-up"
-        data-aos-duration="1500"
+        data-aos='fade-up'
+        data-aos-duration='1500'
         className={styles.right}
       >
-        <img src={picture} alt="" />
+        <img src={picture} alt='profile picture' />
       </figure>
     </section>
   );

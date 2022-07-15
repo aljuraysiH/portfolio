@@ -17,38 +17,35 @@ const Navbar = ({ language, setLanguage }) => {
     localStorage.setItem("theme", theme);
   }, [theme]);
 
+  const handleContactBTN = (e) => {
+    e.preventDefault();
+    setToggle(false);
+    setShowModal(!showModal);
+  };
+
   return (
     <>
-      <Toggle
-        onClick={toggleTheme}
-        theme={theme}
-        language={language}
-        setLanguage={setLanguage}
-      />
-
       <div className={styles.navbar}>
         <Link to={"/"}>
           <p className={styles.logo}>{t("logo")}</p>
         </Link>
+        <Toggle
+          onClick={toggleTheme}
+          theme={theme}
+          language={language}
+          setLanguage={setLanguage}
+        />
         <nav className={`${styles.nav} ${toggle ? "" : styles.hidden}`}>
-          <a href="#about" onClick={() => setToggle(false)}>
+          <a href='#about' onClick={() => setToggle(false)}>
             {t("about")}
           </a>
-          <a href="#projects" onClick={() => setToggle(false)}>
+          <a href='#projects' onClick={() => setToggle(false)}>
             {t("projects")}
           </a>
-          <a href="#skills" onClick={() => setToggle(false)}>
+          <a href='#skills' onClick={() => setToggle(false)}>
             {t("skills")}
           </a>
-          <a
-            href="/"
-            className="btng"
-            onClick={(e) => {
-              e.preventDefault();
-              setToggle(false);
-              setShowModal(!showModal);
-            }}
-          >
+          <a href='/' className='btng' onClick={handleContactBTN}>
             <span></span>
             {t("contact")}
           </a>

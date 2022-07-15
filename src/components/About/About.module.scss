@@ -1,16 +1,14 @@
 .container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+  max-width: 130rem;
+  margin: 6rem auto 0;
+  display: flex;
   align-items: center;
+  justify-content: center;
   padding: 0 4rem;
 
-  @media only screen and (max-width: 56.25em) {
-    margin-top: 2rem;
-  }
   @media only screen and (max-width: 46.875em) {
-    margin-top: 6rem;
-
-    grid-template-columns: 1fr;
+    flex-direction: column-reverse;
+    gap: 3rem;
   }
 
   .left {
@@ -18,8 +16,8 @@
     display: flex;
     flex-direction: column;
     gap: 1.6rem;
-    border-left: 3px solid transparent;
-    border-right: 3px solid transparent;
+    padding-left: 2rem;
+    padding-right: 2rem;
 
     h2 {
       border-left: 3px solid var(--primary);
@@ -37,7 +35,7 @@
       margin-left: 0;
 
       margin-right: -13px;
-      padding-right: 1rem;
+      padding-right: 1.3rem;
       border-right: 3px solid var(--primary);
     }
     p {
@@ -53,7 +51,7 @@
 
     .about {
       display: grid;
-      grid-template-columns: repeat(2, 50%);
+      grid-template-columns: repeat(2, 1fr);
       gap: 1rem;
       font-size: 1.6rem;
       font-weight: 700;

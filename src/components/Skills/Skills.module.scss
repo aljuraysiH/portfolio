@@ -1,3 +1,8 @@
+.container {
+  max-width: 130rem;
+  margin: 6rem auto 0;
+}
+
 .header {
   margin-top: 2rem;
   text-align: center;
@@ -10,8 +15,11 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   justify-items: center;
-  // gap: rem;
   row-gap: 4rem;
+
+  figure {
+    cursor: pointer;
+  }
 }
 
 .card {
